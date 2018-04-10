@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <base href="/vue-router/" />
+  <title>Hello, Vue Router</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+</head>
+
+<body ng-app="vue.router">
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="/vue-router/" class="brand-logo">ui-router + ngVue + vue-router</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a ui-sref="hello">Hello State</a>
+        </li>
+        <li>
+          <a ui-sref="pure-angular">Pure AngularJS</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <ui-view></ui-view>
+  </div>
+  <script src="/assets/vue-router.build.js"></script>
+</body>
+</html>
