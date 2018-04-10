@@ -33,6 +33,7 @@ export function ngVueLinker (componentName, jqElement, elAttributes, scope, $inj
   }
 
   const vuexStore = $ngVue ? {store: $ngVue.getVuexStore()} : {}
+  const vueRouter = $ngVue ? {router: $ngVue.getVueRouter()} : {}
 
   const watchOptions = {
     depth: elAttributes.watchDepth,
@@ -52,7 +53,8 @@ export function ngVueLinker (componentName, jqElement, elAttributes, scope, $inj
       )
     },
     ...vueHooks,
-    ...vuexStore
+    ...vuexStore,
+    ...vueRouter
   })
 
   scope.$on('$destroy', () => {
